@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,KeyboardAvoidingView} from 'react-native';
+import {Platform, StyleSheet, Text, View,KeyboardAvoidingView, Image} from 'react-native';
 import LoginForm from './LoginForm';
 
 class Login extends Component {
@@ -8,7 +8,7 @@ class Login extends Component {
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
 
         <View style={styles.loginContainer}>
-            
+            <Image resizeMode="contain" style={styles.logo} source={require('./../../resources/images/logo-dark-bg.png')} />
         </View>
        <View style={styles.formContainer}>
            <LoginForm />
