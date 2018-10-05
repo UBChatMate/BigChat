@@ -6,3 +6,6 @@ npm install --save react-native-firebase
 
 react-native install react-native-fbsdk
 react-native link react-native-fbsdk
+
+pip install django-allauth
+

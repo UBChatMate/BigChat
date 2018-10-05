@@ -37,6 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # Providers - Find more on allauth documentation
+    # https://django-allauth.readthedocs.io/en/latest/installation.html
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
+
 ]
 
 MIDDLEWARE = [
@@ -67,6 +79,15 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+
 WSGI_APPLICATION = 'BigChat.wsgi.application'
 
 
@@ -78,6 +99,20 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    
+    # 'default': {
+    #      'ENGINE': 'django.db.backends.postgresql',
+    #      'NAME': 'chatmate',
+    #      'HOST': 'chatmate.postgres.database.azure.com',
+    #      'USER': 'BigChat',
+    #      'PASSWORD': 'ChatMate222!'
+    #      # Only add if using PSQL on azure
+    #      'OPTIONS': {
+    #          'sslmode' : 'require'
+    #      }
+    #  }
+
+    #  dbname='{your_database}' user='BigChat@chatmate' host='chatmate.postgres.database.azure.com’ password='{your_password}' port='5432' sslmode=true'
 }
 
 
@@ -113,6 +148,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
