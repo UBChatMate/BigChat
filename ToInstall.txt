@@ -1,11 +1,21 @@
+Front-End
+
+npm install react
+
 npm install react-native
 
 npm install react-navigation
 
+/*
 npm install --save react-native-firebase
 
 react-native install react-native-fbsdk
-react-native link react-native-fbsdk
+react-native linnk react-native-fbsdk
+
+*/
+
+
+Back-End
 
 pip install django-allauth
 
