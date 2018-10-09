@@ -63,6 +63,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'BigChat.urls'
 
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+# SECURE_SSL_REDIRECT = True
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -105,7 +108,7 @@ DATABASES = {
     #      'NAME': 'chatmate',
     #      'HOST': 'chatmate.postgres.database.azure.com',
     #      'USER': 'BigChat',
-    #      'PASSWORD': 'ChatMate222!'
+    #      'PASSWORD': 'ChatMate222!',
     #      # Only add if using PSQL on azure
     #      'OPTIONS': {
     #          'sslmode' : 'require'
