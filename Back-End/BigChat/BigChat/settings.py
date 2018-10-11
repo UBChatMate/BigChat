@@ -98,22 +98,22 @@ WSGI_APPLICATION = 'BigChat.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    
     # 'default': {
-    #      'ENGINE': 'django.db.backends.postgresql',
-    #      'NAME': 'chatmate',
-    #      'HOST': 'chatmate.postgres.database.azure.com',
-    #      'USER': 'BigChat',
-    #      'PASSWORD': 'ChatMate222!',
-    #      # Only add if using PSQL on azure
-    #      'OPTIONS': {
-    #          'sslmode' : 'require'
-    #      }
-    #  }
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    
+    'default': {
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': 'bigchat',
+         'HOST': 'chatmate.postgres.database.azure.com',
+         'USER': 'bigchat@chatmate',
+         'PASSWORD': 'ChatMate222!',
+         # Only add if using PSQL on azure
+         'OPTIONS': {
+             'sslmode' : 'require'
+         }
+     }
 
     #  dbname='{your_database}' user='BigChat@chatmate' host='chatmate.postgres.database.azure.com’ password='{your_password}' port='5432' sslmode=true'
 }
